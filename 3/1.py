@@ -11,7 +11,7 @@ def is_numb(i):
 def clear():
     e1.delete(0, 'end') 
 def error():
-    msg=messagebox.showinfo("Ошибка", 'Массив введен неверно')
+    messagebox.showinfo("Ошибка", 'Массив введен неверно')
 def count():
     inp = e1.get() 
     inp = inp.split(' ')
@@ -25,7 +25,7 @@ def count():
             error()
             return()
     if len(y) == 8:
-        messagebox.showinfo("Ошибка","В массиве нет целочисленных элементов")
+        messagebox.showinfo("Ошибка","В массиве нет Wелочисленных элементов")
     else:
         messagebox.showinfo("Ответ", y)
 
