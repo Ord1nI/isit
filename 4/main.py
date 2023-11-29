@@ -1,10 +1,10 @@
-from tkinter import *
+import tkinter as tk
 from tkinter import messagebox
 from PIL import Image,ImageTk
 def clear():
     e1.delete(0, 'end') 
 def error():
-    msg=messagebox.showinfo( "Ошибка", 'Некорректные данные')
+    messagebox.showinfo( "Ошибка", 'Некорректные данные')
 def count():
     b = e1.get()
     try:
@@ -26,26 +26,26 @@ def count():
                 output += '%.3f' % a[j] + ' '
         arr.append(a)
         output += '\n'
-    msg1=messagebox.showinfo( "Ответ", output)
-    print(arr)
+    messagebox.showinfo( "Ответ", output)
+    print(output)
 
 
         
         
-window = Tk()
+window = tk.Tk()
 window.title("title")
 window.geometry("1920x1080")
 
-image = Image.open('Задание(1).png')
+image = Image.open('задание(1).png')
 photo = ImageTk.PhotoImage(image)
-lbl1 = Label(window, image=photo)
+lbl1 = tk.Label(window, image=photo)
 lbl1.place(x=70,y=0)
 
 
-e1 = Entry(window, width=100, background='lightblue')
-b1 = Button(text="Проверить массив", width=15, height=3, command=count, background='lightgreen')
+e1 = tk.Entry(window, width=100, background='lightblue')
+b1 = tk.Button(text="Проверить массив", width=15, height=3, command=count, background='lightgreen')
 
-bclear = Button(text="Очистить ввод", width=15, height=3, command=clear, background='indianred')
+bclear = tk.Button(text="Очистить ввод", width=15, height=3, command=clear, background='indianred')
 
 b1.place(x=300, y=275)
 e1.place(x=150, y=250)
