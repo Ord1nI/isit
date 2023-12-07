@@ -70,7 +70,7 @@ window.title("title")
 window.geometry("821x500")
 window.config(bg='lightgrey')
 
-image = Image.open('5/Задание.jpg')
+image = Image.open('Задание.jpg')
 photo = ImageTk.PhotoImage(image)
 lbl1 = tk.Label(window, image=photo)
 
