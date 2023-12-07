@@ -12,7 +12,7 @@ def to_float(num):
 def clear():
     e1.delete(0, 'end') 
 def error(error_message):
-    messagebox.showinfo( "Ошибка",error_message) 
+    messagebox.showerror( "Ошибка",error_message) 
 def count():
     b = e1.get()
     if to_float(b):
@@ -42,7 +42,7 @@ def count():
         
         
 window = tk.Tk()
-window.title("title")
+window.title("Задание 4")
 window.geometry("1920x1080")
 
 image = Image.open('задание(1).png')
