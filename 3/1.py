@@ -15,17 +15,17 @@ def error():
 def count():
     inp = e1.get() 
     inp = inp.split(' ')
+    print(is_numb(inp[0]))
     y = 'массив:\n'
     for i in inp:
         if is_numb(i):
-            float(i)
-            if i.isdecimal():
+            if float(i).is_integer():
                 y+=i+'\n'
         else:
             error()
             return()
     if len(y) == 8:
-        messagebox.showinfo("Ошибка","В массиве нет Wелочисленных элементов")
+        messagebox.showinfo("Ошибка","В массиве нет целочисленных элементов")
     else:
         messagebox.showinfo("Ответ", y)
 
@@ -34,7 +34,7 @@ window.title("Окно")
 window.geometry("800x400")
 window.config(bg = 'lightgray')
 
-image = Image.open("Задание.png")
+image = Image.open("3/Задание.png")
 photo = ImageTk.PhotoImage(image)
 lbl1 = tk.Label(window, image=photo)
 lbl1.place(x=70,y=0)
