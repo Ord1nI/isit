@@ -63,14 +63,14 @@ def count():
         if distance[i] < min:
             min = distance[i]
             index = i
-    messagebox.showinfo('Ответ','Кратчайшее растояние между точками '+['A B','A C','B C'][index]+' = '+format(min,'.3f'))
+    messagebox.showinfo('Ответ','Кратчайшее растояние между точками '+['A и B','A и C','B и C'][index]+' = '+format(min,'.3f'))
 
 window = tk.Tk()
 window.title("title")
 window.geometry("821x500")
 window.config(bg='lightgrey')
 
-image = Image.open('Задание.jpg')
+image = Image.open('5/Задание.jpg')
 photo = ImageTk.PhotoImage(image)
 lbl1 = tk.Label(window, image=photo)
 
